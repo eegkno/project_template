@@ -1,0 +1,6 @@
+{
+    "project_name": "Full project name",
+    "project_short_name": "Short project name",
+    "repo_name": "{{ cookiecutter.project_short_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "description": "A short description of the project."
+}

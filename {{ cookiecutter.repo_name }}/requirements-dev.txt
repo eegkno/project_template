@@ -1,0 +1,10 @@
+-r requirements.txt
+pytest-cov
+Sphinx
+coverage
+flake8
+black
+pylint
+pytest
+pytest-cov
+rope
