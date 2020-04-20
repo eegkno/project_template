@@ -18,13 +18,13 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
+Clean template
 ```
-    cookiecutter https://github.com/eegkno/project-template
+cookiecutter https://github.com/eegkno/project-template
 ```
 
-### To start a new project using an specific branch, run:
-------------
+Using a specific branch 
 
 ```
-cookiecutter -c example https://github.com/eegkno/project-template
+cookiecutter -c BRANCH https://github.com/eegkno/project-template
 ```
