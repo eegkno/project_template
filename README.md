@@ -21,3 +21,10 @@ $ conda install cookiecutter
 ```
     cookiecutter https://github.com/eegkno/project-template
 ```
+
+### To start a new project using an specific branch, run:
+------------
+
+```
+cookiecutter -c example https://github.com/eegkno/project-template
+```
