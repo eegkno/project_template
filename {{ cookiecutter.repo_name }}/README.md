@@ -3,6 +3,45 @@
 
 {{cookiecutter.description}}
 
+## Getting started
+
+Create a symbolic link to the data directory on labshare:
+
+```console
+make datalink
+```
+
+Create a symbolic link to model directory on labshare:
+
+```console
+make modellink
+```
+
+### Python environment
+
+There are two options, installing from a yaml or plain text files.
+
+
+1. Create env and install libraries from yaml file using conda
+
+```console
+make env_yaml
+```
+
+2. Create env and install libraries from plain text file using conda
+
+```console
+conda update -n base conda
+conda create --prefix  $HOME/.conda/envs/{{ cookiecutter.repo_name }}
+conda activate $HOME/.conda/envs/{{ cookiecutter.repo_name }}
+pip install -r requirements.txt
+```
+
+Install these python libraries only for development
+
+```console
+make pydev
+```
 
 Project Organization
 ------------
@@ -61,50 +100,12 @@ Project Organization
     ├── requirements.txt   <- Main libraries used for production. Must include fixed version and
     │                         dependencies should be omitted.
     │
+    ├── requirements.yaml  <- Main libraries used for production. Must include fixed version and
+    │                         dependencies should be omitted.
+    │
     └── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported
 
 
 --------
 
-## Getting started
-
-Create a symbolic link to the data directory on DLshare:
-
-```
-make datalink
-```
-
-### Python environment
-
-See this [link](https://githubifc.iad.ca.inet/Datalab-Tutorial/DevOps-Team/wiki) for an explanation of how to set up your environment.
-
-After activating your conda environment, run the following commands as needed:
-
-To install all the Python development libraries
-
-```
-make Pydev-install
-```
-
-To install all the Python production libraries
-
-```
-make Pyprod-install
-```
-
-### R environment
-
-To install all the R packages
-
-```
-make Rinstall
-```
-
-## Running the Pipeline
-
 ## Contributing Code
-
-### Data Lab coding guidelines
-
-Please familairize yourself with coding [guidelines](https://pages.githubifc.iad.ca.inet/Datalab-Tutorial/guidelines/index.html)
-
